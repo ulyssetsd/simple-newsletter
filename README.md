@@ -1,2 +1,2 @@
 # simple-newsletter
-ASP.NET web app. Allow user to subscribe to a newsletter
+ASP.NET Core MVC web app. Allow user to subscribe to a newsletter

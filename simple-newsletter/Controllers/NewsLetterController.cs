@@ -8,7 +8,7 @@ using simple_newsletter.Models;
 
 namespace simple_newsletter.Controllers
 {
-    public class HomeController : Controller
+    public class NewsLetterController : Controller
     {
         public IActionResult Index()
         {
@@ -29,6 +29,7 @@ namespace simple_newsletter.Controllers
             return View();
         }
 
+        [Route("Privacy")]
         public IActionResult Privacy()
         {
             return View();

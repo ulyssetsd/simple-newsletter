@@ -44,7 +44,7 @@ namespace simple_newsletter
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/NewsLetter/Error");
                 app.UseHsts();
             }
 
@@ -56,7 +56,7 @@ namespace simple_newsletter
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=NewsLetter}/{action=Index}/{id?}");
             });
         }
     }
