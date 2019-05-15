@@ -15,23 +15,11 @@ namespace simple_newsletter.Controllers
             return View();
         }
 
-        public IActionResult About()
+        [Route("Subscribe")]
+        public IActionResult Subscribe()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Your succesfully subscribe to the newsletter !";
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        [Route("Privacy")]
-        public IActionResult Privacy()
-        {
             return View();
         }
 
