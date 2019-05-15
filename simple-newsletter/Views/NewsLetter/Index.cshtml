@@ -1,7 +1,34 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Subscribe to our Newsletter";
+    ViewData["LabelEmail"] = "Enter your email";
+    ViewData["LabelHeard"] = "How do you heard about us ?";
+    ViewData["LabelReason"] = "Reason for signing up (optional)";
+    ViewData["Subscribe"] = "Subscribe";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<section>
+    <h2>@ViewData["Title"]</h2>
 
-<p>Content of Index</p>
+    <form asp-action="Subscribe" method="post">
+        <div class="form-group">
+            <label for="email">@ViewData["LabelEmail"]</label>
+            <input type="email" class="form-control" placeholder="name@mail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="heard">@ViewData["LabelHeard"]</label>
+            <select class="form-control" id="heard" required>
+                <option hidden disabled selected></option>
+                <option value="Advert">Advert</option>
+                <option value="Word of Mouth">Word of Mouth</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="reason">@ViewData["LabelReason"]</label>
+            <textarea class="form-control" id="reason"></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">@ViewData["Subscribe"]</button>
+    </form>
+</section>
