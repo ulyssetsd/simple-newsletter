@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using simple_newsletter.Models;
 
 namespace simple_newsletter
 {
@@ -33,6 +35,9 @@ namespace simple_newsletter
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<simple_newsletterContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("simple_newsletterContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +49,7 @@ namespace simple_newsletter
             }
             else
             {
-                app.UseExceptionHandler("/NewsLetter/Error");
+                app.UseExceptionHandler("/Subscribers/Error");
                 app.UseHsts();
             }
 
@@ -56,7 +61,7 @@ namespace simple_newsletter
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=NewsLetter}/{action=Index}/{id?}");
+                    template: "{controller=Subscribers}/{action=Create}/{id?}");
             });
         }
     }
