@@ -9,7 +9,7 @@ using simple_newsletter.Models;
 namespace simple_newsletter.Migrations
 {
     [DbContext(typeof(simple_newsletterContext))]
-    [Migration("20190516132353_Initial")]
+    [Migration("20190516201331_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,9 +26,10 @@ namespace simple_newsletter.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Email")
+                        .IsRequired();
 
-                    b.Property<string>("Heard");
+                    b.Property<int>("Heard");
 
                     b.Property<string>("Reason");
 

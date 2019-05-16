@@ -24,11 +24,12 @@ namespace simple_newsletter.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.Property<int>("Heard");
 
                     b.Property<string>("Reason");
-
-                    b.Property<string>("Heard");
 
                     b.HasKey("Id");
 

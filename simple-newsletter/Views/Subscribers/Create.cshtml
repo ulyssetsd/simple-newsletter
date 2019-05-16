@@ -14,17 +14,12 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" type="email" placeholder="name@mail.com" required />
+                <input asp-for="Email" class="form-control" placeholder="name@mail.com" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Heard" class="control-label"></label>
-                <select asp-for="Heard" class="form-control" required>
-                    <option hidden disabled selected></option>
-                    <option value="Advert">Advert</option>
-                    <option value="Word of Mouth">Word of Mouth</option>
-                    <option value="Other">Other</option>
-                </select>
+                <select asp-for="Heard" asp-items="Html.GetEnumSelectList<HeardEnum>()" class="form-control" ></select>
                 <span asp-validation-for="Heard" class="text-danger"></span>
             </div>
             <div class="form-group">
