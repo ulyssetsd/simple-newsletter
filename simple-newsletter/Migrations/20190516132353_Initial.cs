@@ -14,8 +14,8 @@ namespace simple_newsletter.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Email = table.Column<string>(nullable: true),
-                    Reason = table.Column<string>(nullable: true),
-                    Heard = table.Column<string>(nullable: true)
+                    Heard = table.Column<string>(nullable: true),
+                    Reason = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

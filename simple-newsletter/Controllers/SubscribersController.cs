@@ -54,7 +54,7 @@ namespace simple_newsletter.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Email,Reason,Heard")] Subscriber subscriber)
+        public async Task<IActionResult> Create([Bind("Id,Email,Heard,Reason")] Subscriber subscriber)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace simple_newsletter.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Email,Reason,Heard")] Subscriber subscriber)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Email,Heard,Reason")] Subscriber subscriber)
         {
             if (id != subscriber.Id)
             {

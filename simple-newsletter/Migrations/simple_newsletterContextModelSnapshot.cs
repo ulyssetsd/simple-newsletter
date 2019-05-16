@@ -26,9 +26,9 @@ namespace simple_newsletter.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<string>("Heard");
-
                     b.Property<string>("Reason");
+
+                    b.Property<string>("Heard");
 
                     b.HasKey("Id");
 
