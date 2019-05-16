@@ -15,11 +15,16 @@
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
                 <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <span asp-validation-for="Email" class="text-danger" type="Email" placeholder="name@mail.com" required></span>
             </div>
             <div class="form-group">
                 <label asp-for="Reason" class="control-label"></label>
-                <input asp-for="Reason" class="form-control" />
+                <select asp-for="Reason" class="form-control" required>
+                    <option hidden disabled selected></option>
+                    <option value="Advert">Advert</option>
+                    <option value="Word of Mouth">Word of Mouth</option>
+                    <option value="Other">Other</option>
+                </select>
                 <span asp-validation-for="Reason" class="text-danger"></span>
             </div>
             <div class="form-group">
