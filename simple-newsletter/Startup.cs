@@ -49,7 +49,7 @@ namespace simple_newsletter
             }
             else
             {
-                app.UseExceptionHandler("/NewsLetter/Error");
+                app.UseExceptionHandler("/Subscribers/Error");
                 app.UseHsts();
             }
 
@@ -61,7 +61,7 @@ namespace simple_newsletter
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=NewsLetter}/{action=Index}/{id?}");
+                    template: "{controller=Subscribers}/{action=Create}/{id?}");
             });
         }
     }
