@@ -10,13 +10,13 @@
 
     <form asp-action="Subscribe" method="post">
         <div class="form-group">
-            <label for="email">@ViewData["LabelEmail"]</label>
-            <input type="email" class="form-control" placeholder="name@mail.com" required>
+            <label for="Email">@ViewData["LabelEmail"]</label>
+            <input type="Email" class="form-control" placeholder="name@mail.com" required>
         </div>
 
         <div class="form-group">
-            <label for="heard">@ViewData["LabelHeard"]</label>
-            <select class="form-control" id="heard" required>
+            <label for="Heard">@ViewData["LabelHeard"]</label>
+            <select class="form-control" id="Heard" required>
                 <option hidden disabled selected></option>
                 <option value="Advert">Advert</option>
                 <option value="Word of Mouth">Word of Mouth</option>
@@ -25,8 +25,8 @@
         </div>
 
         <div class="form-group">
-            <label for="reason">@ViewData["LabelReason"]</label>
-            <textarea class="form-control" id="reason"></textarea>
+            <label for="Reason">@ViewData["LabelReason"]</label>
+            <textarea class="form-control" id="Reason"></textarea>
         </div>
 
         <button class="btn btn-primary" type="submit">@ViewData["Subscribe"]</button>
